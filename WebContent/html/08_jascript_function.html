@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script type="text/javascript">
+		
+		function  fun1(){
+			console.log("fun1() 호출")	
+		}
+
+		var fun2 = function(){
+			console.log("fun2() 호출")
+		}
+		//함수 호출 
+		fun1();
+		fun2();
+		
+		var fun3 = fun1;
+		fun3();
+		}
+		//매개변수는 데이터 타입을 붙히지 않는다
+		function fun4(x, y){
+			var resule = x +y;
+			console.log(result);
+			
+		}
+		//함수 호출 
+		fun4(3, 5)
+		function fun5(x, y){
+			var resule = x +y;
+			return result
+			
+		}
+		//리턴값함수 호출 
+		var rs = fun(3, 5);
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

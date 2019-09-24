@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		var var1 =10;// 전역 변수 
+		var2 = 20;
+		
+		//함수 선언 (메서드)
+		function fun1(){
+			//로컬 변수 : 
+			var var3 = 30;
+			
+			// 전역 변수 
+			
+			var4 = 40;
+			consile.log("var1: " + var1)
+			consile.log("var2: " + var2)
+			consile.log("var3: " + var3)
+			consile.log("var4: " + var4)
+			
+			
+			//함수 호출
+			fun1();
+		}
+		function fun2(){
+			consile.log("var1: " + var1)
+			consile.log("var2: " + var2)
+			//consile.log("var3: " + var3)
+			consile.log("var4: " + var4)
+			
+		}
+		
+		</script>
+		
+	</head>
+	<body>
+	
+	</body>
+</html>
