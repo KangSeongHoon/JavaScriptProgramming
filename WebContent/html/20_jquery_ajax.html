@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="..common/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	function fun1() {
+		$.ajax({
+			url : "20_ajax_content1.html",
+			success : function(content) {
+				$("#div1").html(content);
+			}
+
+		});
+	}
+	var timerId = null;
+	var num = 1;
+
+	function fun2() {
+		timerId = window.setInterval(function() {
+			$.ajax({
+				url : "20_ajax_content " + no + ".html",
+				success : function(content) {
+					console.log(content);
+					$("#div1").html(content);
+				}
+
+			});
+			num++;
+			if (num == 4) {
+				num = 1;
+			}
+		}, 3000);
+	}
+	function fun3() {
+		if (timer != null) {
+			window.clearInterval(timerId);
+		}
+
+	}
+</script>
+</head>
+<body>
+	<button onclik="fun1()">부분 갱신</button>
+	<button onclik="fun2()">자동 부분 갱신 시작</button>
+	<button onclik="fun3()">자동 부분 갱신 취소</button>
+
+	<hr />
+	<div style="display: flex; height: 300px">
+		<div style="flex-grow: 1; heigth: 100%; border: 1px solid black">
+			<h4>[고정내용]</h4>
+			<img src="../common/image/menu.png" />
+		</div>
+		<div id="div1" style="flex-grow: 1; heigth: 100%; border: 1px solid black">
+			<h4>부분 갱신 내용</h4>
+			[AJAX 원리]<br /> <img src="..common/image/ajax1.png" width="100px" />
+		</div>
+	</div>
+</body>
+</html>
